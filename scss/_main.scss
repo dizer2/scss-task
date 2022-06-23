@@ -1,0 +1,224 @@
+
+@mixin button-bg($bg){
+    &:hover{
+        background: lighten($bg, 10%);
+        transition: 0.3s;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: $fonts;
+    background-color: $bodyColor;
+}
+
+.main-wrapper {
+    background-image: $headerBackground;
+    height: 100vh;
+    background-size: cover;
+
+    .logo {
+        width: 250px;
+        height: 140px;
+    }
+
+    .top-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header {
+        color: $headerTextColor;
+        text-transform: uppercase;
+        text-align: center;
+        height: 100vh;
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 160px;
+        }
+        nav{
+            a{
+                line-height: 55px;
+                padding: 25px 110px;
+                border-right: 2px solid $navBorderColor;
+                
+                &:last-child{
+                    border-right: none;
+                }
+            }
+        }
+        a {
+            color: $headerTextColor;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .btn-top{
+            background-color: $buttonColor;
+            padding: 18px 65px;
+            text-decoration: none;
+            position: relative;
+            top: 40px;
+            color: $buttonTextColor;
+            &:hover{
+                @include button-bg($buttonColor) ;
+            }
+        }
+    }
+
+
+    main{
+        margin: 0 auto;
+ width: 960px;
+.toolbar{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
+    input{
+        width: 180px;
+        height: 40px;
+        padding-left: 15px;
+        font-family: $fonts;
+        outline: none;
+    }
+}
+section{
+    
+    h1{
+       width: 100%;
+       text-align: right;
+       text-transform: uppercase;
+       margin-top: 22px;
+       color: $sectionHeaderColor;
+    }
+    article{
+        background-color: $articleBackground;
+        display: flex;
+        margin-top: 25px;
+        .btn{
+        width: 220px;
+        height: 45px;
+        float: right;
+        margin-right: 15px;
+        margin-top: 20px;
+        border: none;
+        background-color:$buttonColor ;
+        text-transform: uppercase;
+        color: $buttonTextColor ;
+        }
+        img{
+            margin: 10px;
+
+        }
+        .post{
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 15px;
+.post-description{
+   color: $timeTextColor; 
+   line-height: 30px;
+   border-bottom: 1px solid $horizontalLineColor;
+   
+}
+h3{
+    color: $titleArticleColor;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+p{
+    color: $articleTextColor;
+    line-height: 20px;
+}
+      }
+    }
+}
+    }
+
+    #about{
+     p{
+       color: $articleTextColor ;
+       line-height: 30px;
+       margin-bottom: 30px;
+    }
+  
+
+}
+#contact{
+h4{
+    text-align: right;
+    text-transform: uppercase;
+    color: $sectionHeaderColor;
+}
+label{
+ display: block;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 3px;
+    color: $formDescriptionColor;
+}
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 34px;
+    margin-bottom: 26px;
+    .inputsItem{
+        width: 100%;
+        &:first-child{
+            margin-right: 10px;
+
+        }
+    }
+input{
+   height: 48px;
+   width: 100%;
+   font-size: 20px;
+   padding-left: 15px;
+}
+}
+textarea{
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 0;
+}
+.sendBtn{
+    float: right;
+    background-color:$buttonColor ;
+    width: 200px;
+    height: 38px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 28px;
+    position: relative;
+    bottom: 10px;
+    &hover{
+        @include button-bg($buttonColor)
+    }
+
+}
+
+
+}
+footer{
+    padding: 9px;
+    font-size: 15px;
+    color: $footerTextColor ;
+    position: relative;
+    top: 50px;
+   
+}
+}
